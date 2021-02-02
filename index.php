@@ -6,8 +6,8 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = 'bataillesylvie@live.fr';
-$to = 'unsolo@hotmail.fr';
+$from = 'harley@outlook.fr';
+$to = 'chalie@outlook.fr';
 
 // TODO Votre code ici.
 //$message = 'Hello World, sending a simple mail !';
@@ -16,7 +16,7 @@ $headers = array (
     'X-mailer' => 'PHP/' . phpversion()
 );
 //
-//mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
+//mail($to, 'essai', $message, $headers, "-f $from");
 
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
@@ -31,12 +31,12 @@ $headers = array (
  */
 // TODO Votre code ici.
 
-$message = "Mon message de 120 caractères, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
+$message = "Mon message de 120 caractères, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
 
 $message = wordwrap($message, 70, "\r\n");
 
-$sucess = mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
+$sucess = mail($to, 'essai', $message, $headers, "-f $from");
 if($sucess){
     echo 'Le message a bien été envoyé. Merci !';
 }
