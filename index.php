@@ -6,10 +6,11 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = '';
-$to = '';
+$from = 'bataillesylvie@live.fr';
+$to = 'unsolo@hotmail.fr';
 $message = 'Hello World, sending a simple mail !';
 // TODO Votre code ici.
+mail($to, 'essai', 'contenu du message');
 
 
 /**
@@ -24,3 +25,4 @@ $message = 'Hello World, sending a simple mail !';
  *     N'écrasez pas les valeurs déjà existantes ( s'il y en a ).
  */
 // TODO Votre code ici.
+
