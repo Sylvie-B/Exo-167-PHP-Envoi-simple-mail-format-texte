@@ -36,4 +36,10 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 
 $message = wordwrap($message, 70, "\r\n");
 
-mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
+$sucess = mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
+if($sucess){
+    echo 'Le message a bien été envoyé. Merci !';
+}
+else {
+    echo 'Une erreur est survenue lors de l\'envoi du mail';
+}
