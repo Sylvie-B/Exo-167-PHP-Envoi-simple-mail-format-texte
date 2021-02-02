@@ -8,10 +8,15 @@
 
 $from = 'bataillesylvie@live.fr';
 $to = 'unsolo@hotmail.fr';
-$message = 'Hello World, sending a simple mail !';
-// TODO Votre code ici.
-mail($to, 'essai', 'contenu du message', "-f $from");
 
+// TODO Votre code ici.
+$message = 'Hello World, sending a simple mail !';
+$headers = array (
+    'reply-To' => $from,
+    'X-mailer' => 'PHP/' . phpversion()
+);
+
+mail($to, 'essai', 'contenu du message', $headers, "-f $from");
 
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
