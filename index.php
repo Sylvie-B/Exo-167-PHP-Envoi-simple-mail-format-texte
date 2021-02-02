@@ -10,7 +10,7 @@ $from = 'bataillesylvie@live.fr';
 $to = 'unsolo@hotmail.fr';
 $message = 'Hello World, sending a simple mail !';
 // TODO Votre code ici.
-mail($to, 'essai', 'contenu du message');
+mail($to, 'essai', 'contenu du message', "-f $from");
 
 
 /**
