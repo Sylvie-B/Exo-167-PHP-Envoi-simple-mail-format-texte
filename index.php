@@ -6,7 +6,7 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = 'bataillesylvie@live.fr';
+$from = '';
 $to = 'unsolo@hotmail.fr';
 
 // TODO Votre code ici.
@@ -16,7 +16,7 @@ $headers = array (
     'X-mailer' => 'PHP/' . phpversion()
 );
 
-mail($to, 'essai', 'contenu du message', $headers, "-f $from");
+mail($to, 'essai', 'contenu du message', $headers, "-f bataillesylvie@live.fr");
 
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
