@@ -6,17 +6,17 @@
  * 3. Déployez sur votre serveur et testez !
  */
 
-$from = '';
+$from = 'bataillesylvie@live.fr';
 $to = 'unsolo@hotmail.fr';
 
 // TODO Votre code ici.
-$message = 'Hello World, sending a simple mail !';
+//$message = 'Hello World, sending a simple mail !';
 $headers = array (
-    'Reply-To' => 'bataillesylvie@live.fr',
+    'Reply-To' => $from,
     'X-mailer' => 'PHP/' . phpversion()
 );
-
-mail($to, 'essai', 'contenu du message', $headers, "-f bataillesylvie@live.fr");
+//
+//mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
 
 /**
  * 4. Commentez le code précédent, mais gardez les variables $from et $to
@@ -31,3 +31,9 @@ mail($to, 'essai', 'contenu du message', $headers, "-f bataillesylvie@live.fr");
  */
 // TODO Votre code ici.
 
+$message = "Mon message de 120 caractères, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
+
+$message = wordwrap($message, 70, "\r\n");
+
+mail($to, 'essai', $message, $headers, "-f bataillesylvie@live.fr");
