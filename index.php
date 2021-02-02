@@ -12,7 +12,7 @@ $to = 'unsolo@hotmail.fr';
 // TODO Votre code ici.
 $message = 'Hello World, sending a simple mail !';
 $headers = array (
-    'reply-To' => $from,
+    'Reply-To' => 'bataillesylvie@live.fr',
     'X-mailer' => 'PHP/' . phpversion()
 );
 
